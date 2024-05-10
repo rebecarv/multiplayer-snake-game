@@ -32,7 +32,7 @@ class Snake(pygame.sprite.AbstractGroup):
         self.score = 0
 
         # snakes speed determined by the delay (and so its not dependent on FPS but is strictly attached to the grid)
-        self.movement_delay = 0.06
+        self.movement_delay = 0.065
         self.time = time.time()
 
         # Initial body of the snake
