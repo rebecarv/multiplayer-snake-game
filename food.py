@@ -5,8 +5,9 @@ class Food(pygame.sprite.Sprite):
     def __init__(self, color, block_size, screen):
         super().__init__()
 
-        self.image = pygame.Surface((block_size, block_size))
-        self.image.fill(color)
+        self.image = pygame.Surface((block_size, block_size), pygame.SRCALPHA)
+        pygame.draw.circle(self.image, color, (block_size // 2, block_size // 2), block_size // 2)
+
         self.rect = self.image.get_rect()
 
         self.block_size = block_size

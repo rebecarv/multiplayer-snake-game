@@ -60,7 +60,7 @@ class Screen:
 
     def starting_screen(self):
         """Displays the starting screen"""
-        self.screen.fill(colors.DARK)
+        self.screen.fill(colors.BLACK)
         self.multiline_centered_messages(("Welcome to the ultimate snake game.","Press space to play."), colors.MINT_CREAM)
         pygame.display.flip()
 
@@ -69,7 +69,7 @@ class Screen:
         if not (snake1.Q and snake2.Q): # Check for winner
             self.winner_message(controller, snake1, snake2)
         else: # No winner. Game continues. Update Sprites
-            self.screen.fill(colors.DARK)
+            self.screen.fill(colors.BLACK)
             all_sprites_list.update()
             all_sprites_list.draw(self.screen)
 
@@ -114,7 +114,7 @@ class Screen:
     def display_scores(self, controller, score1: int, score2: int) -> bool:
         """Displays scores on the screen"""
         print("Im displaying scores")
-        self.screen.fill(colors.DARK)
+        self.screen.fill(colors.BLACK)
         self.multiline_centered_messages(("The current score is:", str(score1) + " : " + str(score2), "Press space to continue."), colors.MINT_CREAM)
         pygame.display.flip()
         time.sleep(1)
